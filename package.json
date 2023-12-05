@@ -1,6 +1,6 @@
 {
   "name": "@rosmarinus/common-tailwindcss",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "common-tailwindcss for rosmarinus projects",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
