@@ -1,3 +1,9 @@
+## <small>0.0.3 (2023-12-05)</small>
+
+* fix: screen width ([b3bb5d3](https://github.com/rosmarinus-project/common-tailwindcss/commit/b3bb5d3))
+
+
+
 ## <small>0.0.2 (2023-12-05)</small>
 
 * fix: export ([0eefc4c](https://github.com/rosmarinus-project/common-tailwindcss/commit/0eefc4c))
