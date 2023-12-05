@@ -1,6 +1,6 @@
 import { type PresetsConfig } from 'tailwindcss/types/config';
 import plugin from 'tailwindcss/plugin';
-import { arrToPercentObj, arrToPxObj, arrToScreenWidthObj, range } from './utils';
+import { arrToPercentObj, arrToPxObj, arrToScreenWidthObj, range, arrToScreenHeightObj } from './utils';
 import { layout, text } from './components';
 
 export const presets: PresetsConfig = {
@@ -12,7 +12,12 @@ export const presets: PresetsConfig = {
     spacing: {
       ...arrToPxObj(range(0, 100)),
       ...arrToPercentObj(range(0, 100)),
+    },
+    width: {
       ...arrToScreenWidthObj(range(0, 100)),
+    },
+    height: {
+      ...arrToScreenHeightObj(range(0, 100)),
     },
     zIndex: { 1: '1', 0: '0', dialog: '1000' },
     flex: { 1: '1' },

@@ -32,6 +32,14 @@ export function arrToScreenWidthObj(arr: number[]) {
   }, {});
 }
 
+export function arrToScreenHeightObj(arr: number[]) {
+  return arr.reduce<Record<string, string>>((acc, cur) => {
+    acc[`screen-${cur}`] = `${cur}vh`;
+
+    return acc;
+  }, {});
+}
+
 export function range(start: number, end: number) {
   const arr: number[] = [];
 
