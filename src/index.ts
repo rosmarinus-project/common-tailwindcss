@@ -1,56 +1,7 @@
 import { type PresetsConfig } from 'tailwindcss/types/config';
 import plugin from 'tailwindcss/plugin';
-
-function arrToPxObj(arr: number[]) {
-  return arr.reduce<Record<number, string>>((acc, cur) => {
-    acc[cur] = `${cur}px`;
-
-    return acc;
-  }, {});
-}
-
-function arrToPercentObj(arr: number[]) {
-  return arr.reduce<Record<string, string>>((acc, cur) => {
-    acc[`${cur}%`] = `${cur}%`;
-
-    return acc;
-  }, {});
-}
-
-function arrToColorsObj(arr: string[]) {
-  return arr.reduce<Record<string, string>>((acc, cur) => {
-    acc[cur.toLowerCase()] = `var(--${cur})`;
-
-    return acc;
-  }, {});
-}
-
-function arrToScreenWidthObj(arr: number[]) {
-  return arr.reduce<Record<string, string>>((acc, cur) => {
-    acc[`screen-${cur}`] = `${cur}vw`;
-
-    return acc;
-  }, {});
-}
-
-const noSelect = {
-  '-webkit-touch-callout': 'none',
-  '-webkit-user-select': 'none',
-  '-khtml-user-select': 'none',
-  '-moz-user-select': 'none',
-  '-ms-user-select': 'none',
-  'user-select': 'none',
-};
-
-function range(start: number, end: number) {
-  const arr: number[] = [];
-
-  for (let i = start; i <= end; i++) {
-    arr.push(i);
-  }
-
-  return arr;
-}
+import { arrToPercentObj, arrToPxObj, arrToScreenWidthObj, range } from './utils';
+import { layout, text } from './components';
 
 const presets: PresetsConfig = {
   content: ['./src/**/*.{html,js,ts,tsx,jsx}'],
@@ -77,46 +28,14 @@ const presets: PresetsConfig = {
     plugin(({ addComponents }) => {
       addComponents({
         // center in flex
-        '.p-flex-center': {
-          display: 'flex',
-          'justify-content': 'center',
-          'align-items': 'center',
-        },
+        '.p-flex-center': layout.flexCenter,
         // center in absolute
-        '.p-pos-center': {
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        },
-        '.p-no-select': noSelect,
-        '.p-bold': {
-          'font-weight': '500',
-        },
-        '.p-ellipsis': {
-          overflow: 'hidden',
-          'text-overflow': 'ellipsis',
-          'white-space': 'nowrap',
-          'word-wrap': 'normal',
-        },
-        '.p-ellipsis-2': {
-          overflow: 'hidden',
-          'text-overflow': 'ellipsis',
-          display: '-webkit-box',
-          /* autoprefixer: off */
-          '-webkit-box-orient': 'vertical',
-          /* autoprefixer: on */
-          '-webkit-line-clamp': '2',
-        },
-        '.p-ellipsis-3': {
-          overflow: 'hidden',
-          'text-overflow': 'ellipsis',
-          display: '-webkit-box',
-          /* autoprefixer: off */
-          '-webkit-box-orient': 'vertical',
-          /* autoprefixer: on */
-          '-webkit-line-clamp': '3',
-        },
+        '.p-pos-center': layout.posCenter,
+        '.p-no-select': text.noSelect,
+        '.p-bold': text.bold,
+        '.p-ellipsis': text.ellipsis,
+        '.p-ellipsis-2': text.multilineEllipsis(2),
+        '.p-ellipsis-3': text.multilineEllipsis(3),
       });
     }),
   ],
@@ -124,13 +43,6 @@ const presets: PresetsConfig = {
 
 export default presets;
 
-export const utils = {
-  arrToPxObj,
-  arrToPercentObj,
-  arrToColorsObj,
-  range,
-};
+export * as utils from './utils';
 
-export const components = {
-  noSelect,
-};
+export * as components from './components';
