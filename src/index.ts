@@ -3,7 +3,7 @@ import plugin from 'tailwindcss/plugin';
 import { arrToPercentObj, arrToPxObj, arrToScreenWidthObj, range } from './utils';
 import { layout, text } from './components';
 
-const presets: PresetsConfig = {
+export const presets: PresetsConfig = {
   content: ['./src/**/*.{html,js,ts,tsx,jsx}'],
   theme: {
     fontSize: {
@@ -40,8 +40,6 @@ const presets: PresetsConfig = {
     }),
   ],
 };
-
-export default presets;
 
 export * as utils from './utils';
 
