@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    if: github.repository == 'rosmarinus-project/template-name'
+    if: github.repository == 'rosmarinus-project/common-tailwindcss'
     runs-on: ubuntu-latest
     permissions:
       contents: read
