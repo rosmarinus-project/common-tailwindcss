@@ -1,3 +1,9 @@
+## <small>0.0.2 (2023-12-05)</small>
+
+* fix: export ([0eefc4c](https://github.com/rosmarinus-project/common-tailwindcss/commit/0eefc4c))
+
+
+
 ## <small>0.0.1 (2023-12-05)</small>
 
 * chore: init version ([7aeb5af](https://github.com/rosmarinus-project/common-tailwindcss/commit/7aeb5af))
