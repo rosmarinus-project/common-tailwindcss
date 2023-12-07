@@ -1,3 +1,9 @@
+## <small>0.0.4 (2023-12-07)</small>
+
+* fix: override ([2f8bc66](https://github.com/rosmarinus-project/common-tailwindcss/commit/2f8bc66))
+
+
+
 ## <small>0.0.3 (2023-12-05)</small>
 
 * fix: screen width ([b3bb5d3](https://github.com/rosmarinus-project/common-tailwindcss/commit/b3bb5d3))
