@@ -6,27 +6,29 @@ import { layout, text } from './components';
 export const presets: PresetsConfig = {
   content: ['./src/**/*.{html,js,ts,tsx,jsx}'],
   theme: {
-    fontSize: {
-      ...arrToPxObj([10, 12, 14, 16, 20]),
-    },
-    spacing: {
-      ...arrToPxObj(range(0, 100)),
-      ...arrToPercentObj(range(0, 100)),
-    },
-    width: {
-      ...arrToScreenWidthObj(range(0, 100)),
-    },
-    height: {
-      ...arrToScreenHeightObj(range(0, 100)),
-    },
-    zIndex: { 1: '1', 0: '0', dialog: '1000' },
-    flex: { 1: '1' },
-    borderWidth: {
-      ...arrToPxObj([1]),
-    },
-    borderRadius: {
-      ...arrToPxObj([2, 4, 12]),
-      half: '50%',
+    extend: {
+      fontSize: {
+        ...arrToPxObj([10, 12, 14, 16, 20]),
+      },
+      spacing: {
+        ...arrToPxObj(range(0, 100)),
+        ...arrToPercentObj(range(0, 100)),
+      },
+      width: {
+        ...arrToScreenWidthObj(range(0, 100)),
+      },
+      height: {
+        ...arrToScreenHeightObj(range(0, 100)),
+      },
+      zIndex: { 1: '1', 0: '0', dialog: '1000' },
+      flex: { 1: '1' },
+      borderWidth: {
+        ...arrToPxObj([1]),
+      },
+      borderRadius: {
+        ...arrToPxObj([2, 4, 12]),
+        half: '50%',
+      },
     },
   },
   plugins: [
