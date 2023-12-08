@@ -1,4 +1,4 @@
-import { colorPaletteToCssVarMap } from '../src/components/colors';
+import { colorPaletteToCssVarMap, colorPaletteToCssVarMapList } from '../src/components/colors';
 import { arrToColorsObj } from '../src/utils';
 
 describe('color', () => {
@@ -32,5 +32,13 @@ describe('color', () => {
       'neutral-200': 'var(--neutral-200)',
       'neutral-300': 'var(--neutral-300)',
     });
+  });
+
+  test('colorPaletteToCssVarMapList', () => {
+    expect(
+      colorPaletteToCssVarMapList({
+        'neutral-100': ['#ffffff', '#000000'],
+      }),
+    ).toStrictEqual([{ '--neutral-100': '#ffffff' }, { '--neutral-100': '#000000' }]);
   });
 });
