@@ -1,3 +1,9 @@
+## 0.1.0 (2023-12-08)
+
+* feat: add color components ([4ca80ff](https://github.com/rosmarinus-project/common-tailwindcss/commit/4ca80ff))
+
+
+
 ## <small>0.0.4 (2023-12-07)</small>
 
 * fix: override ([2f8bc66](https://github.com/rosmarinus-project/common-tailwindcss/commit/2f8bc66))
