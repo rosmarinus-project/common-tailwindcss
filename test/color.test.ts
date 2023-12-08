@@ -10,10 +10,12 @@ describe('color', () => {
       colorPaletteToCssVarMap({
         'neutral/100': '#ffffff',
         'NEUTRAL/400/100': '#ffffff',
+        neutral_1000: '#ffffff',
       }),
     ).toStrictEqual({
       '--neutral-100': '#ffffff',
       '--neutral-400-100': '#ffffff',
+      '--neutral-1000': '#ffffff',
     });
   });
 });
