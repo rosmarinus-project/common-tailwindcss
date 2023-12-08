@@ -1,3 +1,10 @@
+## <small>0.1.2 (2023-12-08)</small>
+
+* fix: color utils ([917361e](https://github.com/rosmarinus-project/common-tailwindcss/commit/917361e))
+* fix: test ([74b4e96](https://github.com/rosmarinus-project/common-tailwindcss/commit/74b4e96))
+
+
+
 ## <small>0.1.1 (2023-12-08)</small>
 
 * fix: _ ([7f2468d](https://github.com/rosmarinus-project/common-tailwindcss/commit/7f2468d))
