@@ -16,7 +16,7 @@ export function arrToPercentObj(arr: number[]) {
   }, {});
 }
 
-export function arrToColorsObj(arr: string[]) {
+export function arrToCssVarObj(arr: string[]) {
   return arr.reduce<Record<string, string>>((acc, cur) => {
     const key = cur.toLowerCase().replace(/[/_]/g, '-').replace(/^[-]+/, '');
 

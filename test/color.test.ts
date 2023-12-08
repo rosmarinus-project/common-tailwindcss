@@ -1,5 +1,5 @@
 import { colorPaletteToCssVarMap, colorPaletteToCssVarMapList } from '../src/components/colors';
-import { arrToColorsObj } from '../src/utils';
+import { arrToCssVarObj } from '../src/utils';
 
 describe('color', () => {
   beforeEach(() => {});
@@ -22,9 +22,9 @@ describe('color', () => {
     });
   });
 
-  test('arrToColorsObj', () => {
+  test('arrToCssVarObj', () => {
     expect(
-      arrToColorsObj(['neutral/100', 'NEUTRAL/400/100', 'neutral_1000', 'neutral-200', '--neutral-300']),
+      arrToCssVarObj(['neutral/100', 'NEUTRAL/400/100', 'neutral_1000', 'neutral-200', '--neutral-300']),
     ).toStrictEqual({
       'neutral-100': 'var(--neutral-100)',
       'neutral-400-100': 'var(--neutral-400-100)',
