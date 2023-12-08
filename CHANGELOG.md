@@ -1,3 +1,9 @@
+## 0.2.0 (2023-12-08)
+
+* feat: Palette list ([0293fe7](https://github.com/rosmarinus-project/common-tailwindcss/commit/0293fe7))
+
+
+
 ## <small>0.1.2 (2023-12-08)</small>
 
 * fix: color utils ([917361e](https://github.com/rosmarinus-project/common-tailwindcss/commit/917361e))
