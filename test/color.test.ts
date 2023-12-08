@@ -11,11 +11,13 @@ describe('color', () => {
         'neutral/100': '#ffffff',
         'NEUTRAL/400/100': '#ffffff',
         neutral_1000: '#ffffff',
+        'neutral-200': '#ffffff',
       }),
     ).toStrictEqual({
       '--neutral-100': '#ffffff',
       '--neutral-400-100': '#ffffff',
       '--neutral-1000': '#ffffff',
+      '--neutral-200': '#ffffff',
     });
   });
 });
