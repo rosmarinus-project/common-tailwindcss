@@ -1,3 +1,9 @@
+## 0.3.0 (2023-12-08)
+
+* feat: spacing component ([5bc9d56](https://github.com/rosmarinus-project/common-tailwindcss/commit/5bc9d56))
+
+
+
 ## 0.2.0 (2023-12-08)
 
 * feat: Palette list ([0293fe7](https://github.com/rosmarinus-project/common-tailwindcss/commit/0293fe7))
